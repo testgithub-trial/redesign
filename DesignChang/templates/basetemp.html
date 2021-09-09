@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script><style>
+
+
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index:99;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index:99;
+}
+
+.navbar a:hover {
+  background-color: #000;
+  z-index:99;
+}
+
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+.topnav-right {
+  float: right;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/refresh"><i class="fa fa-fw fa-user"></i> {{session['uname']}}</a>
+  <a class="active" href="{{(url_for('home'))}}" ><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href="{{(url_for('feture'))}}" ><i class="fa fa-envira"></i> Features</a>
+                  <a href="https://cloud.google.com/products/calculator" target="_blank"><i class="fa fa-rupee"></i> Pricing</a>
+     <a href="{{(url_for('allhistroy'))}}" ><i class="fa fa-history"></i> History</a>
+      <a href="{{(url_for('id'))}}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+
+
+    <div class="topnav-right">
+    <a href="{{(url_for('logout'))}}" ><i class="fa fa-sign-out"></i>Logout &nbsp; &nbsp;</a></div>
+<!--    <p style="text-align:right;"><a href="{{(url_for('vpc'))}}" ><i class="fa fa-sign-out"></i> Logout</a></p>-->
+
+
+<!--    <p style="text-align:right;"><button style="font-size:15px">logout <i class="fa fa-sign-out"></i></button></p>-->
+
+
+</div>
+<br>
+
+
+
+ {% block content %}
+    {% endblock %}
+</body>
+</html>
+
+

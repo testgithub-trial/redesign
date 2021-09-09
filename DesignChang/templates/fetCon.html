@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% extends "basetemp.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body class="bodyfebg">
+<br>
+        <br>
+        <br>
+        <br>
+
+<h2>{{fetmsg}}</h2>
+    <dl>
+       <dd>  {{fetmsg1}}</dd>
+       <dd>  {{fetmsg2}}</dd>
+
+
+        <br>
+        <br>
+        <br>
+        <br><h2>{{conmsg}}</h2>
+
+          <dd> {{conmsg1}}</dd>
+          <dd> {{conmsg2}} </dd>
+          <dd> {{conmsg3}}</dd>
+
+    </dl>
+
+
+
+
+    <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br> <br>
+     <br>
+     <br> <br>
+
+
+
+
+
+    {% endblock %}
+</div>
+</body>
+</html>
